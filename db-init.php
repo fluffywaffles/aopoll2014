@@ -15,8 +15,8 @@ $db->queryOne('CREATE TABLE IF NOT EXISTS poll2014
                 (response_id MEDIUMINT NOT NULL AUTO_INCREMENT, 
                  PRIMARY KEY response_id (response_id))');
 
-foreach($artists as $artist) {
-  $db->queryOne('ALTER TABLE poll2014 ADD COLUMN '.$artist.' BIT(1) NOT NULL');
+foreach($yesNoQuestions as $yesno) {
+  $db->queryOne('ALTER TABLE poll2014 ADD COLUMN '.$yesno.' BIT(1) NOT NULL');
 }
 
 foreach($textFields as $textField) {

@@ -1,6 +1,6 @@
 <?php
 
-$artists = array('IggyAzealia',
+$yesNoQuestions = array('IggyAzealia',
 'Flume',
 'TheNeighbourhood',
 'Haim',
@@ -39,12 +39,17 @@ $artists = array('IggyAzealia',
 'AdventureClub',
 'ArianaGrande',
 'Bleachers',
-'Future');
+'Future',
+'wouldAttendForFriendsDislikeArtist',
+'wouldAttendWihtoutFriendsForArtist',
+'listenToMusicBeforeShow');
 
 $textFields = array('name',
 'email',
 'gender',
 'year',
-'location');
+'location',
+'howDoYouFindOutAboutEvents',
+'attendenceFactors');
 
 ?>

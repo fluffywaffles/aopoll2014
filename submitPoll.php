@@ -6,14 +6,14 @@ $valid = true;
 $valuesToInsert = '';
 $insertString = '';
 
-foreach($artists as $artist) {
-  if(!isset($_POST[$artist])) { 
+foreach($yesNoQuestions as $yesno) {
+  if(!isset($_POST[$yesno])) { 
     $valid = false; 
-    echo "Request missing parameter " . $artist . "<br>";
+    echo "Request missing parameter " . $yesno . "<br>";
   }
   else {
-    $valuesToInsert .= $artist . ', ';
-    $insertString .= $_POST[$artist] . ', ';
+    $valuesToInsert .= $yesno . ', ';
+    $insertString .= $_POST[$yesno] . ', ';
   }
 }
 
