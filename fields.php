@@ -40,16 +40,26 @@ $yesNoQuestions = array('IggyAzealia',
 'ArianaGrande',
 'Bleachers',
 'Future',
+'signupForUpdates');
+
+/* addtl. yes/no questions
 'wouldAttendForFriendsDislikeArtist',
 'wouldAttendWihtoutFriendsForArtist',
-'listenToMusicBeforeShow');
+'listenToMusicBeforeShow',
+'greekLife'
+*/
 
 $textFields = array('name',
 'email',
 'gender',
 'year',
-'location',
+'location');
+
+/* addtl. text questions
 'howDoYouFindOutAboutEvents',
-'attendenceFactors');
+'attendenceFactors',
+'major',
+'campusInvolvement'
+*/
 
 ?>
