@@ -6,7 +6,7 @@
         <meta name="description" content="A&amp;O Productions has been providing Concerts, Films and Speakers for the Northwestern Community since 1969." />
         <meta name="keywords" content="Northwestern University, Concerts, Films, Speakers, Music" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/poll.css">
        <script type="text/javascript">
@@ -102,10 +102,10 @@
                         <label><span>northwestern.edu Email:</span><input type="text" name="email"> </label>
 
                         <div id="gender">
-                            <span>Gender</span>
+                            <span>Gender:</span>
                             <label><input type="radio" name="gender">Male</label>
                             <label><input type="radio" name="gender">Female</label>
-                            <label><input type="text" name="gender">(fill in the blank)</label>
+                            <label><input type="text" name="gender">&nbsp;&nbsp;(fill in the blank)</label>
                             <label><input type="radio" name="gender">Prefer not to disclose</label>
                         </div>
 
@@ -121,7 +121,9 @@
                         <label><span>Residence:</span><select name="location">
                           <option value="---Select---">---Select---</option>
                            <option value="offcampus">Off Campus</option> 
-                           <option value="dorm">Residential Hall/College</option> 
+                           <option value="dorm">Residential Hall/College (North Campus)</option> 
+                          <option value="dorm">Residential Hall/College (South Campus)</option> 
+
                            <option value="sororityhouse">Sorority House</option> 
                            <option value="fraternityhouse">Fraternity House</option>
                         </select></label>
@@ -136,7 +138,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/js/poll.js"></script>
+
     <script>
+         var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+         if (iOS){
+            $('html').css('background-image', 'none');            
+            $('html').css('background', 'black');
+         }
         fillEntries()
     </script>
     </body>
