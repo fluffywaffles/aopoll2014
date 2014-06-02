@@ -6,8 +6,9 @@
         <meta name="description" content="A&amp;O Productions has been providing Concerts, Films and Speakers for the Northwestern Community since 1969." />
         <meta name="keywords" content="Northwestern University, Concerts, Films, Speakers, Music" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/global.css">
-         <link rel="stylesheet" href="css/poll.css">
+        <link rel="stylesheet" href="css/poll.css">
        <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-26804534-1']);
@@ -45,5 +46,98 @@
                     </div>
                 </div>
             </div>
+            <div id="container">
+                <h1>A&amp;O Blowout Poll</h1>
+
+
+                <form id="poll">
+                    <h2>Who would you pay $10 to see? (check all that apply)</h2>
+                    <ul id="artist-entries">
+                    </ul>
+                    <div class="divider"></div>
+
+                    <div id="questions">
+                        <h2>A few more questions...</h2>
+                        <div class="question">
+                            <p>If all of your friends are going to an on campus concert, would you attend said concert even if you did not like the artist?</p>
+                            <label><input type="radio" name="friends"> Yes</label>
+                            <label><input type="radio" name="friends"> No</label>
+                        </div>
+
+                        <div class="question">
+                            <p>If you liked an artist that is coming to campus, but none of your friends want to see said artist, would you still attend the show?</p>
+                            <label><input type="radio" name="nofriends"> Yes</label>
+                            <label><input type="radio" name="nofriends"> No</label>
+                        </div>
+
+                        <div class="question">
+                            <p>When you find out about an artist coming to campus, do you listen to the artist's music before deciding whether or not to attend the show?</p>
+                            <label><input type="radio" name="listen"> Yes</label>
+                            <label><input type="radio" name="listen"> No</label>
+                        </div>
+                        <div class="question">
+                            <p>How do you find out about events?</p>
+                            <label><input type="checkbox" name="findout" value="socialmedia"> Social Media</label>
+                            <label><input type="checkbox" name="findout" value="groundflyers"> Ground Flyers</label>
+                            <label><input type="checkbox" name="findout" value="friends">Friends</label>
+                            <label><input type="checkbox" name="findout" value="wordofmouth"> Word of mouth</label>
+                            <label style="width:100%;max-width: none;">Other (please provide)<input type="text" name="findout"> </label>
+                        </div>
+
+                        <div class="question">
+                            <p>What factors do you use to decide whether or not you attend a show? (check all that apply)</p>
+                             <label><input type="checkbox" name="decision" value="friends">Whether or not your friends are going</label>
+                            <label><input type="checkbox" name="decision" value="artist"> Whether or not you like the artist(s) performing</label>
+                            <label><input type="checkbox" name="decision" value="venue">The venue</label>
+                            <label><input type="checkbox" name="decision" value="event">The event</label>
+                           <label style="width:100%;max-width: none;"> Other (please provide)<input type="text" name="decision"> </label>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div id="info">
+                        <h2>Just some quick info about yourself</h2>
+                        <label><span>Name:</span><input type="text" name="name"> </label>
+                        <label><span>northwestern.edu Email:</span><input type="text" name="email"> </label>
+
+                        <div id="gender">
+                            <span>Gender</span>
+                            <label><input type="radio" name="gender">Male</label>
+                            <label><input type="radio" name="gender">Female</label>
+                            <label><input type="text" name="gender">(fill in the blank)</label>
+                            <label><input type="radio" name="gender">Prefer not to disclose</label>
+                        </div>
+
+                        <label><span>Year:</span><select name="year">
+                          <option value="---Select---">---Select---</option>
+                           <option value="2014">2014</option> 
+                           <option value="2015">2015</option> 
+                           <option value="2016">2016</option> 
+                           <option value="2017">2017</option>
+                           <option value="2018">2018</option> 
+                        </select></label>
+
+                        <label><span>Residence:</span><select name="location">
+                          <option value="---Select---">---Select---</option>
+                           <option value="offcampus">Off Campus</option> 
+                           <option value="dorm">Residential Hall/College</option> 
+                           <option value="sororityhouse">Sorority House</option> 
+                           <option value="fraternityhouse">Fraternity House</option>
+                        </select></label>
+
+
+                    </div>
+
+                    <button id="submit" type="submit" value="submit">Submit</button>
+                </form>
+
+            </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/poll.js"></script>
+    <script>
+        fillEntries()
+    </script>
     </body>
 </html>

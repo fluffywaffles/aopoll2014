@@ -20,12 +20,15 @@ html{
 
 body { 
   font:normal 100 62.5%/1.5 "ao_lt_btlight", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   letter-spacing:0;
   color:#fff;
   line-height:1;
   position:relative;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1, h2, h3, h4, h5{
+    text-transform: uppercase;
 }
 
 /*=====HEADER=====*/
@@ -34,11 +37,12 @@ body {
   position: relative;
   height: 80px;
   margin: 30px auto 0 auto;
-  width:85%;
+  width:90%;
   border-bottom: 2px solid white;
   padding-bottom: 10px;
-  @media screen and (max-width:420px){
+  @media (max-width:420px){
     width:95%;
+    min-width:305px;
   }
 }
 
@@ -57,7 +61,7 @@ body {
   position: absolute;
   bottom:10px;
   right:0;
-  @media screen and (max-width:620px){
+  @media (max-width:620px){
     display: block;
     #tagline-textbox{
       margin-right: 0px;
@@ -111,4 +115,10 @@ body {
   z-index: 10;
 }
 
+/*=====PATTERNS=====*/
+.divider{
+  margin:20px auto;
+  border-top:1px solid white;
+  width:90%;
+}
 
