@@ -52,7 +52,7 @@
 
           <form id="poll" action="submitExtra.php"  method="post">
                 <div id="questions">
-                    <h2>A few more questions...</h2>
+                    <h2>Just a few more questions...</h2>
                     <div class="question">
                         <p>If all of your friends are going to an on campus concert, would you attend said concert even if you did not like the artist?</p>
                         <label><input type="radio" name="attendwithfriends"> Yes</label>
