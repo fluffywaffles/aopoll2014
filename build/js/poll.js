@@ -77,3 +77,92 @@ function fillEntries(){
         poll.append(e)
     }
 }
+
+$('#email').focusout(function(){
+        if (!(($(this).val().indexOf("@") == -1) || ($(this).val().indexOf("northwestern.edu") == -1)) ) {
+            $(this).next(".check").next('.error-text').css('display', 'none');
+            $(this).next(".check").css('display', 'inline-block');    
+        }
+})
+$('#name').focusout(function(){
+        if ($(this).val().length != 0) {
+            $(this).removeClass("error-active");
+            $(this).next(".check").next('.error-text').css('display', 'none');
+            $(this).next(".check").css('display', 'inline-block');    
+        }
+})
+$('#year').focusout(function(){
+        if ($(this).val() != '---Select---'){
+            $(this).removeClass("error-active");
+            $(this).next(".check").next('.error-text').css('display', 'none');
+            $(this).next(".check").css('display', 'inline-block');    
+        }
+})
+$('#location').focusout(function(){
+        if ($(this).val() != '---Select---'){
+            $(this).removeClass("error-active");
+            $(this).next(".check").next('.error-text').css('display', 'none');
+            $(this).next(".check").css('display', 'inline-block');    
+        }
+})
+$('#gender').find("input").focusout(function() {
+    if(($(this).is(':checked')) || ($(this).val() != '')) {
+        $('#gender').find('span').removeClass("error-active");
+        $('#gender').find(".check").next('.error-text').css('display', 'none');
+        $('#gender').find(".check").css('display', 'inline-block');
+      }
+})
+
+
+function submitCheck(){
+
+  var checkForm = true;
+  if (($("#email").val().indexOf("@") == -1) && ($("#email").val().indexOf("northwestern.edu") == -1)){
+    checkForm = false;
+    if(!$("#email").hasClass("error-active")){
+      $("#email").addClass("error-active");
+      $("#email").next(".check").next('.error-text').css('display', 'inline-block');
+      $("#email").next(".check").css('display', 'none');
+    }
+  }
+  if ($("#name").val().length == 0){
+    checkForm = false;
+    if(!$("#name").hasClass("error-active")){
+      $("#name").addClass("error-active");
+      $("#name").next(".check").next('.error-text').css('display', 'inline-block');
+      $("#name").next(".check").css('display', 'none');
+    }
+  }
+  if ($("#year").val() == '---Select---'){
+    checkForm = false;
+    if(!$("#year").hasClass("error-active")){
+      $("#year").addClass("error-active");
+      $("#year").next(".check").next('.error-text').css('display', 'inline-block');
+      $("#year").next(".check").css('display', 'none');
+    }
+  }
+  if ($("#location").val() == '---Select---'){
+    checkForm = false;
+    if(!$("#location").hasClass("error-active")){
+      $("#location").addClass("error-active");
+      $("#location").next(".check").next('.error-text').css('display', 'inline-block');
+      $("#location").next(".check").css('display', 'none');
+    }
+  }
+
+  if (($("input[name='gender']:checked").val() == undefined) && ($("input:text[name='gender']").val()
+) == '' ){
+    checkForm = false;
+    if(!$("#gender").find('span').hasClass("error-active")){
+      $("#gender").find('span').addClass("error-active");
+      $("#gender").find(".check").next('.error-text').css('display', 'inline-block');
+      $("#gender").find(".check").css('display', 'none');
+    }
+  }
+
+  if (checkForm){
+    return true;
+  }
+  return false;
+}
+

@@ -6,7 +6,7 @@
         <meta name="description" content="A&amp;O Productions has been providing Concerts, Films and Speakers for the Northwestern Community since 1969." />
         <meta name="keywords" content="Northwestern University, Concerts, Films, Speakers, Music" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/poll.css">
        <script type="text/javascript">
@@ -50,7 +50,7 @@
                 <h1>A&amp;O Blowout Poll</h1>
 
 
-                <form id="poll">
+          <form id="poll" action="submitPoll.php" onsubmit="return submitCheck()" method="post">
                     <h2>Who would you pay $10 to see? (check all that apply)</h2>
                     <ul id="artist-entries">
                     </ul>
@@ -98,27 +98,29 @@
 
                     <div id="info">
                         <h2>Just some quick info about yourself</h2>
-                        <label><span>Name:</span><input type="text" name="name"> </label>
-                        <label><span>northwestern.edu Email:</span><input type="text" name="email"> </label>
+                        <label><span>Name:</span><input type="text" name="name" id="name"><p class="check">&#10004;</p>
+                    <p class="error-text">This field is required</p></label>
+                        <label><span>northwestern.edu Email:</span><input type="text" name="email" id="email"><p class="check">&#10004;</p><p class="error-text">A valid NU email address is required</p></label>
 
                         <div id="gender">
-                            <span>Gender:</span>
-                            <label><input type="radio" name="gender">Male</label>
-                            <label><input type="radio" name="gender">Female</label>
+                            <span>Gender:</span><p class="check">&#10004;</p><p class="error-text">This field is required</p>
+                            <label><input type="radio" name="gender" value="male">Male</label>
+                            <label><input type="radio" name="gender" value="female">Female</label>
                             <label><input type="text" name="gender">&nbsp;&nbsp;(fill in the blank)</label>
-                            <label><input type="radio" name="gender">Prefer not to disclose</label>
+                            <label><input type="radio" name="gender" value="noans">Prefer not to disclose</label>
                         </div>
 
-                        <label><span>Year:</span><select name="year">
+                        <label><span>Year:</span><select name="year" id="year">
                           <option value="---Select---">---Select---</option>
                            <option value="2014">2014</option> 
                            <option value="2015">2015</option> 
                            <option value="2016">2016</option> 
                            <option value="2017">2017</option>
                            <option value="2018">2018</option> 
-                        </select></label>
+                        </select> <p class="check">&#10004;</p>
+                    <p class="error-text">This field is required</p></label>
 
-                        <label><span>Residence:</span><select name="location">
+                        <label><span>Residence:</span><select name="location" id="location">
                           <option value="---Select---">---Select---</option>
                            <option value="offcampus">Off Campus</option> 
                            <option value="dorm">Residential Hall/College (North Campus)</option> 
@@ -126,7 +128,8 @@
 
                            <option value="sororityhouse">Sorority House</option> 
                            <option value="fraternityhouse">Fraternity House</option>
-                        </select></label>
+                        </select><p class="check">&#10004;</p>
+                    <p class="error-text">This field is required</p></label>
 
 
                     </div>

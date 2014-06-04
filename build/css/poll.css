@@ -95,3 +95,17 @@ button {
 
 input[type='text'] {
   width: 200px; }
+
+.error-text {
+  display: none;
+  color: #ef3d47;
+  margin: 0; }
+
+.check {
+  display: none;
+  font-size: 18px;
+  color: #66FF00;
+  margin: 0; }
+
+.error-active {
+  border: 2px solid red; }
